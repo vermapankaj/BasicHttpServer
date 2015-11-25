@@ -81,8 +81,15 @@ public class BasicHttpServer extends Thread {
                     }
                 }
             }
-            else sendResponse(404, "<b>The Requested resource not found ...." +
-                    "Usage: http://127.0.0.1:5000 or http://127.0.0.1:5000/</b>", false);
+            else if (httpMethod.equals("POST")) {
+
+                sendResponse(200, responseBuffer.toString() + "This is a post call", false);
+            }
+            else {
+                sendResponse(404, "<b>method not supported ...." +
+                        "Usage: only http GET and POST methods</b>", false);
+            }
+
         } catch (Exception e) {
             e.printStackTrace();
         }
