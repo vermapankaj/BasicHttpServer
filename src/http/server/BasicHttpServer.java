@@ -1,8 +1,7 @@
 package http.server;
 /*
 * BasicHttpServer.java
-* Author: S.Prasanna
-* @version 1.00
+* http://www.prasannatech.net/2008/10/simple-http-server-java.html
 */
 
 import java.io.*;
